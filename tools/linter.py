@@ -2,11 +2,15 @@ import os
 import sys
 import subprocess
 from argparse import ArgumentParser
+from pathlib import Path
+from dotenv import load_dotenv
 
 
 CWD = os.path.abspath(os.path.dirname(__file__))
+env_path = Path(os.path.join(os.path.dirname(CWD), '.env'))
+load_dotenv(dotenv_path=env_path)
 
-api_key = 'c4wxQWqJi39E.kaNCZ'
+api_key = os.getenv('API_KEY')
 
 class DiffLinter:
     def __init__(self) -> None:
