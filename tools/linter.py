@@ -6,6 +6,7 @@ from argparse import ArgumentParser
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 
+api_key = 'c4wxQWqJi39E.kaNCZ'
 
 class DiffLinter:
     def __init__(self) -> None:
